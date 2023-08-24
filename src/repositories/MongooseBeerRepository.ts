@@ -8,6 +8,8 @@ export class MongooseBeerRepository implements BeerRepository {
     }
 
     async getAll(): Promise<BeerProps[]> {
+        const response = await Beer.find()
+
         return []
     }
 }
