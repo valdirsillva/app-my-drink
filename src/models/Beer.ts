@@ -1,4 +1,4 @@
-import { MongooseBeerRepository } from "../repostories/MongooseBeerRepository";
+import { MongooseBeerRepository } from "../repositories/MongooseBeerRepository";
 
 interface Beer {
     name_beer: string;

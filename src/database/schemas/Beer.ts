@@ -10,3 +10,5 @@ const beerSchema = new mongoose.Schema({
 
 // Definindo um modelo no Mongoose do tipo Cerveja 
 const Beer = mongoose.model('Beer', beerSchema);
+
+export { Beer }
