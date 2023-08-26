@@ -5,7 +5,7 @@ services:
     build: .
     ports:
       - 8080:8080
-    depends-on:
+    depends_on:
       - mongo
   mongo:
     image: mongo
