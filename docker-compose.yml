@@ -1,0 +1,15 @@
+version: '3'
+services:
+  app:
+    # Construido a partir do Dockerfile no mesmo diretório
+    build: .
+    ports:
+      - 8080:8080
+    depends-on:
+      - mongo
+  mongo:
+    image: mongo
+    volumes:
+      - mongodb_data:/data/db
+volumes:
+  mongodb_data:
