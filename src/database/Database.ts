@@ -2,16 +2,13 @@ import mongoose, { ConnectOptions } from "mongoose"
 
 export class Database {
     static async _connect() {
-
         try {
-            await mongoose.connect("mongodb://127.0.0.1:27017//db-app-my-drinks", {
-                useNewUrlParser: true,
-                useUnifiedTopology: true,
-            } as ConnectOptions)
-        } catch (err) {
+            await mongoose.connect("mongodb://127.0.0.1:27017/db-app-my-drinks")
 
+        } catch (err) {
             console.error('Database connection error', err)
-            process.exit(0);
+            // Finaliza a aplicação com código de saída 1
+            process.exit(1)
         }
     }
 
@@ -30,4 +27,4 @@ export class Database {
                 return 'Estado inválido';
         }
     }
-}  
+}
