@@ -25,5 +25,5 @@ app.get("/", viewBeer.get.bind(viewBeer))
 app.post("/beer", viewBeer.add.bind(viewBeer))
 
 app.listen(PORT, () => {
-    console.log("APP RUNNING: http://127.0.0.1:", + PORT)
+    console.log(`API RUNNING ADDRESS: http://localhost:${PORT}`)
 });

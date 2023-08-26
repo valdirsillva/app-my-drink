@@ -20,8 +20,10 @@ export class BeerView {
     public async add(request: Request, response: Response) {
         try {
             const data = request.body
+            console.log(data)
+
             const res = await this.beerViewModel.add(data);
-            response.status(200).send(res)
+            response.status(201).send(res)
         } catch (err) {
             response.status(404).send({ error: err })
             console.error(err)
