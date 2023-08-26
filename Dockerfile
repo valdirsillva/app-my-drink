@@ -5,7 +5,7 @@ FROM node:18-alpine AS builder
 WORKDIR /app 
 COPY . .
 RUN npm install
-RUN npm build 
+RUN npm run build 
 
 # 2 Estágio final
 FROM node:18-alpine AS final
